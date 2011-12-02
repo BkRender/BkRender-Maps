@@ -1,0 +1,9 @@
+Project embedding Google Maps into a Web page with the following features:
+1. Google Maps JS API V3 on Google Android / Apple iPhone / Samsung Bada
+2. Center on your position on startup
+3. Type in an address using a FORM
+4. Hit the search button to route yourself from your current location to the filled in address
+5. Choose your mode of travel (Cycling / Driving / Walking - initial choice is walking)
+6. PHP is used to gather what's been filled into the fileds
+
+BkYannC

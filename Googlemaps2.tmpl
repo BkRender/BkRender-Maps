@@ -1,0 +1,56 @@
+<html>
+    <style type="text/css" id="#bkhead('myOwnStyle')">
+        .myMainTableDiv {
+            display: table;
+        }
+        .myFirstTableRow {
+            display: table-row;
+        }
+        .myTableCell {
+            display: table-cell;
+            height: 50px;
+            vertical-align: middle;
+            padding: 5px;
+            font-size: 10px;
+        }
+        .youAreHere {
+            padding: 5px;
+            font-size: 14px;
+        }
+        form {
+            margin: 4px !IMPORTANT;
+        }
+    </style>
+        
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true" id="#bkhead('gMapsJS1')"/>
+    <script type="text/javascript" src="gMaps2.js" id="#bkhead('gMapsJS2')" />
+    <script type="text/javascript">
+        
+        function calcRoute() {
+                    var selectedMode = document.getElementById("mode").value;
+                    var request = {
+                        origin: positionSet,
+                        destination: "$param.end_address",
+
+                        travelMode: google.maps.DirectionsTravelMode[selectedMode]
+                    };
+                    directionsService.route(request, function(response, status) {
+                        if (status == google.maps.DirectionsStatus.OK) {
+                            directionsDisplay.setDirections(response);
+                        }
+                    });
+
+                }        
+        
+        addEventListener('bkPageLoaded',myInitMaps, false);     
+        calcRoute();
+    </script>
+    
+    #set ($height = 0)
+
+    #set ( $height = $height.parseInt($bkrender.capabilities.max_image_width))
+
+    #set ($height = ($height - 50))
+    <div id="map_canvas" class="roundedCornerLoads" style="max-width: 100%; height:${height}px; position:center;"></div>
+
+</html>
