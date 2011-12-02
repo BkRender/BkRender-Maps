@@ -10,7 +10,7 @@
                 var pos = new google.maps.LatLng(position.coords.latitude,
                 position.coords.longitude);
 
-            var contentInfoWindow = "<div class='myMainTableDiv'><div class='myFirstTableRow'><div class='myTableCell'><img src='bkrender.jpeg' style='width: 30px' /></div><div class='myTableCell'>Telecom Cell and BkRender are geolocalizing you.</div></div></div><div class='youAreHere'>And you're here!</div>";
+            var contentInfoWindow = "<div class='myMainTableDiv'><div class='myFirstTableRow'><div class='myTableCell'><img src='bkrender.jpeg' style='width: 30px' /></div><div class='myTableCell'>BkRender is geolocalizing you.</div></div></div><div class='youAreHere'>And you're here!</div>";
 
                 var infowindow = new google.maps.InfoWindow({
                     map: map,
